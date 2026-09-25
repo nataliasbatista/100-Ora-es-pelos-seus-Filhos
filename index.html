@@ -208,7 +208,7 @@ html,body{max-width:100%;overflow-x:hidden}
           <span class="checkout-label">ACESSO COMPLETO AO E-BOOK</span>
           <div class="price">R$ 14,97</div>
           <p class="price-note">Pagamento único • acesso imediato ao PDF</p>
-          <a class="button primary wide js-buy" href="https://pay.kiwify.com.br/BDtPLls" rel="noopener">Quero receber por R$ 14,97</a>
+          <a class="button primary wide js-buy" href="https://pay.hotmart.com/V107758356S?bid=1790338693272" rel="noopener">Quero receber por R$ 14,97</a>
           <div class="guarantee"><strong>Garantia de 7 dias</strong><br>Conheça o material com tranquilidade. Se ele não corresponder às suas expectativas, solicite o reembolso dentro do prazo da plataforma.</div>
           <p class="secure">🔒 Compra processada em ambiente seguro</p>
         </div>
@@ -245,8 +245,8 @@ html,body{max-width:100%;overflow-x:hidden}
   </div>
 
   <script>
-// Substitua este endereço pelo link do checkout da Kiwify.
-const KIWIFY_CHECKOUT = "https://pay.kiwify.com.br/BDtPLls";
+// Link do checkout da Hotmart.
+const HOTMART_CHECKOUT = "https://pay.hotmart.com/V107758356S?bid=1790338693272";
 
 // Eventos prontos para Google Analytics/GTM: quando um ID for conectado,
 // será possível medir visita, rolagem da oferta e clique no checkout.
@@ -256,7 +256,7 @@ track("page_view_oracoes_filhos");
 
 document.querySelectorAll(".js-buy").forEach((button) => {
   const placement = button.closest(".offer") ? "oferta" : button.closest(".mobile-buy") ? "fixo_mobile" : "pagina";
-  button.href = KIWIFY_CHECKOUT;
+  button.href = HOTMART_CHECKOUT;
   button.target = "_blank";
   button.rel = "noopener";
   button.addEventListener("click", () => track("checkout_click", {placement, value: 14.97, currency: "BRL"}));
